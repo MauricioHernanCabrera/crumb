@@ -1,0 +1,22 @@
+{
+  "name": "crumb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/crumb.css",
+  "scripts": {
+    "dev": "node-sass -w scss\\tymo.scss dist\\tymo.css",
+    "build": "node-sass scss\\tymo.scss dist\\tymo.min.css --output-style compressed",
+    "clean": "git restore ."
+  },
+  "author": "Mauricio Hernan Cabrera",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauricioHernanCabrera/crumb"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "utils",
+    "sass"
+  ]
+}
