@@ -1,0 +1,23 @@
+@mixin utilities_generator($array) {
+  $list_responsive: ();
+  
+  @each $name, $responsive, $active in $array {
+    @if $active and $responsive {
+      $list_responsive: append($list_responsive, ($name, $responsive));
+    }
+  }
+
+  @each $name, $responsive, $active in $array {
+    @if $active {
+      @include call_mixin($name);
+    }
+  }
+
+  @each $breakpoint, $variant in $responsive_variants {
+    @include breakpoint($breakpoint) {
+      @each $name, $responsive in $list_responsive {
+        @include call_mixin($name, $variant);
+      }
+    }
+  }
+}
