@@ -1,0 +1,7 @@
+@mixin grid_areas($base_name, $list) {
+  @each $item in $list {
+    .#{$base_name}#{$item} {
+      grid-area: $item;
+    }
+  }
+}

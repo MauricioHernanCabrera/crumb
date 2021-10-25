@@ -1,0 +1,287 @@
+// colors
+$color_primary:  #1867C0 !default;
+$color_secondary: #FB8C00 !default;
+$color_success:   #4CAF50 !default;
+$color_warning:   #FB8C00 !default;
+$color_error:     #FF5252 !default;
+$color_info:      #5CBBF6 !default;
+$color_light:     #FFFFFF !default;
+$color_dark:      #212121 !default;
+
+$theme_colors: (
+  primary:       $color_primary,
+  secondary:     $color_secondary,
+  success:       $color_success,
+  warning:       $color_warning,
+  error:         $color_error,
+  info:          $color_info,
+  light:         $color_light,
+  dark:          $color_dark,
+  'transparent': 'transparent',
+) !default;
+
+// breakpoints
+$breakpoints: (
+  xs:  380px,
+  sm:  576px,
+  md:  768px,
+  lg:  992px,
+  xl:  1200px,
+  xxl: 1478px,
+) !default;
+
+// responsive_variants
+$responsive_variants: ();
+
+@each $key, $value in $breakpoints {
+  $responsive_item: (#{$key}: "_" + $key);
+  $responsive_variants: map-merge($responsive_variants, $responsive_item);
+}
+
+
+// container
+$container_name: container !default;
+$container_default: xl !default;
+
+// debugger
+$debugger_color:      $color_light !default;
+$debugger_background: $color_primary !default;
+$debugger_z_index: 100 !default;
+
+// font-family
+$font_1: 'Nunito', sans-serif !default;
+$font_2: 'Solway', serif !default;
+
+// fonts
+$fonts: (
+  1: $font_1,
+  2: $font_2,
+) !default;
+
+// padding
+$padding_min:      0 !default;
+$padding_max:      15 !default;
+$padding_multiple: 4px !default;
+
+// margin
+$margin_min:      0 !default;
+$margin_max:      15 !default;
+$margin_multiple: 4px !default;
+
+// border
+$border_width: 1px !default;
+$border_color: $color_primary !default;
+$borders_width: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+// aspect ratio
+$aspect_ratios: (
+  (21, 9),
+  (16, 9),
+  (4, 3),
+  (1, 1)
+) !default;
+
+// border radius
+$rounded: (
+  1:      1px,
+  sm:     3px,
+  md:     5px,
+  lg:     10px,
+  circle: 50%,
+  pill:   120px,
+  0:      0,
+) !default;
+
+// flex grow
+$flex_grow: (
+  0: 0,
+  1: 1,
+) !default;
+
+// flex shrink
+$flex_shrink: (
+  0: 0,
+  1: 1,
+) !default;
+
+// height
+$heights: (
+  25:   25%,
+  50:   50%,
+  75:   75%,
+  100:  100%,
+  auto: auto
+) !default;
+
+// opacity
+$opacities: (
+  0:   0,
+  25:  0.25,
+  50:  0.5,
+  75:  0.75,
+  100: 1,
+) !default;
+
+// order values
+$orders: (
+  first: -1,
+  0:     0,
+  1:     1,
+  2:     2,
+  3:     3,
+  4:     4,
+  5:     5,
+  last:  6,
+  none:  inherit,
+) !default;
+
+// width
+$widths: (
+  25:   25%,
+  50:   50%,
+  75:   75%,
+  100:  100%,
+  auto: auto
+) !default;
+
+$reset_active: false !default;
+
+$align_content_has_responsive: true !default;
+$align_items_has_responsive: true !default;
+$align_self_has_responsive: true !default;
+$aspect_ratio_has_responsive: true !default;
+$background_color_has_responsive: false !default;
+$border_color_has_responsive: false !default;
+$border_width_has_responsive: false !default;
+$break_word_has_responsive: false !default;
+$color_has_responsive: false !default;
+$display_has_responsive: false !default;
+$flex_direction_has_responsive: true !default;
+$flex_grow_has_responsive: true !default;
+$flex_shrink_has_responsive: true !default;
+$flex_wrap_has_responsive: true !default;
+$font_family_has_responsive: false !default;
+$font_style_has_responsive: false !default;
+$font_style_has_responsive: false !default;
+$font_weight_has_responsive: false !default;
+$height_has_responsive: true !default;
+$justify_content_has_responsive: true !default;
+$list_has_responsive: false !default;
+$margin_has_responsive: false !default;
+$max_height_has_responsive: false !default;
+$max_width_has_responsive: false !default;
+$object_fit_has_responsive: false !default;
+$object_position_has_responsive: false !default;
+$opacity_has_responsive: false !default;
+$order_has_responsive: true !default;
+$overflow_has_responsive: false !default;
+$padding_has_responsive: false !default;
+$pointer_events_has_responsive: false !default;
+$position_has_responsive: true !default;
+$reset_has_responsive: false !default;
+$rounded_has_responsive: false !default;
+$text_align_has_responsive: false !default;
+$text_decoration_has_responsive: false !default;
+$text_transform_has_responsive: false !default;
+$text_truncate_has_responsive: false !default;
+$user_select_has_responsive: false !default;
+$vertical_align_has_responsive: false !default;
+$visibility_has_responsive: true !default;
+$white_space_has_responsive: false !default;
+$width_has_responsive: false !default;
+
+$align_content_active: true !default;
+$align_items_active: true !default;
+$align_self_active: true !default;
+$aspect_ratio_active: true !default;
+$background_color_active: true !default;
+$border_color_active: true !default;
+$border_width_active: true !default;
+$break_word_active: true !default;
+$color_active: true !default;
+$display_active: true !default;
+$flex_direction_active: true !default;
+$flex_grow_active: true !default;
+$flex_shrink_active: true !default;
+$flex_wrap_active: true !default;
+$font_family_active: true !default;
+$font_style_active: true !default;
+$font_style_active: true !default;
+$font_weight_active: true !default;
+$height_active: true !default;
+$justify_content_active: true !default;
+$list_active: true !default;
+$margin_active: true !default;
+$max_height_active: true !default;
+$max_width_active: true !default;
+$object_fit_active: true !default;
+$object_position_active: true !default;
+$opacity_active: true !default;
+$order_active: true !default;
+$overflow_active: true !default;
+$padding_active: true !default;
+$pointer_events_active: true !default;
+$position_active: true !default;
+$reset_active: true !default;
+$rounded_active: true !default;
+$text_align_active: true !default;
+$text_decoration_active: true !default;
+$text_transform_active: true !default;
+$text_truncate_active: true !default;
+$user_select_active: true !default;
+$vertical_align_active: true !default;
+$visibility_active: true !default;
+$white_space_active: true !default;
+$width_active: true !default;
+
+$utilities: (
+  (align_content, $align_content_has_responsive, $align_content_active),
+  (align_items, $align_items_has_responsive, $align_items_active),
+  (align_self, $align_self_has_responsive, $align_self_active),
+  (aspect_ratio, $aspect_ratio_has_responsive, $aspect_ratio_active),
+  (background_color, $background_color_has_responsive, $background_color_active),
+  (border_color, $border_color_has_responsive, $border_color_active),
+  (border_width, $border_width_has_responsive, $border_width_active),
+  (break_word, $break_word_has_responsive, $color_active),
+  (color, $color_has_responsive, $display_active),
+  (display, $display_has_responsive, $flex_direction_active),
+  (flex_direction, $flex_direction_has_responsive, $flex_grow_active),
+  (flex_grow, $flex_grow_has_responsive, $flex_shrink_active),
+  (flex_shrink, $flex_shrink_has_responsive, $flex_wrap_active),
+  (flex_wrap, $flex_wrap_has_responsive, $font_family_active),
+  (font_family, $font_family_has_responsive, $font_style_active),
+  (font_style, $font_style_has_responsive, $font_style_active),
+  (font_style, $font_style_has_responsive, $font_weight_active),
+  (font_weight, $font_weight_has_responsive, $height_active),
+  (height, $height_has_responsive, $justify_content_active),
+  (justify_content, $justify_content_has_responsive, $list_active),
+  (list, $list_has_responsive, $margin_active),
+  (margin, $margin_has_responsive, $max_height_active),
+  (max_height, $max_height_has_responsive, $max_width_active),
+  (max_width, $max_width_has_responsive, $object_fit_active),
+  (object_fit, $object_fit_has_responsive, $object_position_active),
+  (object_position, $object_position_has_responsive, $opacity_active),
+  (opacity, $opacity_has_responsive, $order_active),
+  (order, $order_has_responsive, $overflow_active),
+  (overflow, $overflow_has_responsive, $padding_active),
+  (padding, $padding_has_responsive, $pointer_events_active),
+  (pointer_events, $pointer_events_has_responsive, $position_active),
+  (position, $position_has_responsive, $reset_active),
+  (rounded, $rounded_has_responsive, $rounded_active),
+  (text_align, $text_align_has_responsive, $text_align_active),
+  (text_decoration, $text_decoration_has_responsive, $text_decoration_active),
+  (text_transform, $text_transform_has_responsive, $text_transform_active),
+  (text_truncate, $text_truncate_has_responsive, $text_truncate_active),
+  (user_select, $user_select_has_responsive, $user_select_active),
+  (vertical_align, $vertical_align_has_responsive, $vertical_align_active),
+  (visibility, $visibility_has_responsive, $visibility_active),
+  (white_space, $white_space_has_responsive, $white_space_active),
+  (width, $width_has_responsive, $width_active),
+) !default;
